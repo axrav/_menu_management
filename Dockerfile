@@ -8,6 +8,7 @@ RUN npm install
 
 COPY . .
 
+COPY .env .env
 
 EXPOSE 4330
 
