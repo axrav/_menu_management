@@ -7,6 +7,7 @@
     ```bash
     git clone https://github.com/axrav/_menu_management
     cd _menu_management
+    git checkout use-dotenv
     ```
 
 2. Update environment variables:
@@ -34,6 +35,7 @@
     ```bash
     git clone https://github.com/axrav/_menu_management
     cd _menu_management
+    git checkout use-dotenv
     ```
 
 2. Install dependencies:
