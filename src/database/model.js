@@ -56,7 +56,6 @@ const subCategorySchema = mongoose.Schema({
   },
   taxType: {
     type: String,
-    required: true,
   },
   items: [{ type: mongoose.Schema.Types.ObjectId, ref: "Item" }], // References to Item
 });
