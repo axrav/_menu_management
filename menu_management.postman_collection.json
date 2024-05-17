@@ -1,0 +1,1193 @@
+{
+	"info": {
+		"_postman_id": "cc27b559-6334-4b01-8745-605b0aea0251",
+		"name": "menu management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "23457534"
+	},
+	"item": [
+		{
+			"name": "category",
+			"item": [
+				{
+					"name": "create category",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Main Course\",\n  \"description\": \"A selection of delicious main course dishes.\",\n  \"image\": \"https://example.com/main-course.jpg\",\n  \"taxApplicable\": true,\n  \"taxNumber\": \"ABC123\",\n  \"taxType\": \"VAT\"\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://menu-management-cj6w.onrender.com/api/v1/category/create-category"
+					},
+					"response": [
+						{
+							"name": "create cat",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"Main Course\",\n  \"description\": \"A selection of delicious main course dishes.\",\n  \"image\": \"https://example.com/main-course.jpg\",\n  \"taxApplicable\": true,\n  \"taxNumber\": \"ABC123\",\n  \"taxType\": \"VAT\"\n\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "https://menu-management-cj6w.onrender.com/api/v1/category/create-category"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "247"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"f7-l/y1tKMu3HDFiHQCkrLomiJhhY4\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 17 May 2024 18:23:17 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"name\": \"Main Course\",\n    \"description\": \"A selection of delicious main course dishes.\",\n    \"image\": \"https://example.com/main-course.jpg\",\n    \"taxApplicable\": true,\n    \"taxNumber\": \"ABC123\",\n    \"taxType\": \"VAT\",\n    \"subCategories\": [],\n    \"_id\": \"6647a095b14f3c4d5ca20cf7\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "update category",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Primary Course\",\n  \"description\": \"A selection of delicious main course dishes.\",\n  \"image\": \"https://example.com/main-course.jpg\",\n  \"taxApplicable\": true,\n  \"taxNumber\": \"ABC123r\",\n  \"taxType\": \"GST\"\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://menu-management-cj6w.onrender.com/api/v1/category/update-category/6647a095b14f3c4d5ca20cf7"
+					},
+					"response": [
+						{
+							"name": "update cat",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"Primary Course\",\n  \"description\": \"A selection of delicious main course dishes.\",\n  \"image\": \"https://example.com/main-course.jpg\",\n  \"taxApplicable\": true,\n  \"taxNumber\": \"ABC123r\",\n  \"taxType\": \"GST\"\n\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "https://menu-management-cj6w.onrender.com/api/v1/category/update-category/6647a095b14f3c4d5ca20cf7"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "251"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"fb-a3JQ2buFKuZHu8hOBY4S87386rA\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 17 May 2024 18:24:53 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"6647a095b14f3c4d5ca20cf7\",\n    \"name\": \"Primary Course\",\n    \"description\": \"A selection of delicious main course dishes.\",\n    \"image\": \"https://example.com/main-course.jpg\",\n    \"taxApplicable\": true,\n    \"taxNumber\": \"ABC123r\",\n    \"taxType\": \"GST\",\n    \"subCategories\": [],\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "get categories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "https://menu-management-cj6w.onrender.com/api/v1/category/get-categories"
+					},
+					"response": [
+						{
+							"name": "get cat",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "https://menu-management-cj6w.onrender.com/api/v1/category/get-categories"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "501"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1f5-HDe+ZbSlcpWyBGY/smzgzP3048I\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 17 May 2024 18:25:29 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"66479ff665ee4674a4f7fe57\",\n        \"name\": \"Main Course\",\n        \"description\": \"A selection of delicious main course dishes.\",\n        \"image\": \"https://example.com/main-course.jpg\",\n        \"taxApplicable\": true,\n        \"taxNumber\": \"ABC123\",\n        \"taxType\": \"VAT\",\n        \"subCategories\": [],\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"6647a095b14f3c4d5ca20cf7\",\n        \"name\": \"Primary Course\",\n        \"description\": \"A selection of delicious main course dishes.\",\n        \"image\": \"https://example.com/main-course.jpg\",\n        \"taxApplicable\": true,\n        \"taxNumber\": \"ABC123r\",\n        \"taxType\": \"GST\",\n        \"subCategories\": [],\n        \"__v\": 0\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "get category by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "https://menu-management-cj6w.onrender.com/api/v1/category/get-category/6647a095b14f3c4d5ca20cf7"
+					},
+					"response": [
+						{
+							"name": "get cat by id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "https://menu-management-cj6w.onrender.com/api/v1/category/get-category/6647a095b14f3c4d5ca20cf7"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "251"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"fb-a3JQ2buFKuZHu8hOBY4S87386rA\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 17 May 2024 18:27:00 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"6647a095b14f3c4d5ca20cf7\",\n    \"name\": \"Primary Course\",\n    \"description\": \"A selection of delicious main course dishes.\",\n    \"image\": \"https://example.com/main-course.jpg\",\n    \"taxApplicable\": true,\n    \"taxNumber\": \"ABC123r\",\n    \"taxType\": \"GST\",\n    \"subCategories\": [],\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "delete category by id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "https://menu-management-cj6w.onrender.com/api/v1/category/delete-category/6647a095b14f3c4d5ca20cf7"
+					},
+					"response": [
+						{
+							"name": "delete cat by id",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": "https://menu-management-cj6w.onrender.com/api/v1/category/delete-category/6647a095b14f3c4d5ca20cf7"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "251"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"fb-a3JQ2buFKuZHu8hOBY4S87386rA\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 17 May 2024 18:27:52 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"6647a095b14f3c4d5ca20cf7\",\n    \"name\": \"Primary Course\",\n    \"description\": \"A selection of delicious main course dishes.\",\n    \"image\": \"https://example.com/main-course.jpg\",\n    \"taxApplicable\": true,\n    \"taxNumber\": \"ABC123r\",\n    \"taxType\": \"GST\",\n    \"subCategories\": [],\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "get full category",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "https://menu-management-cj6w.onrender.com/api/v1/category/get-full-category/66479ff665ee4674a4f7fe57"
+					},
+					"response": [
+						{
+							"name": "get full category",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "https://menu-management-cj6w.onrender.com/api/v1/category/get-full-category/66479ff665ee4674a4f7fe57"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "527"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"20f-299HLMWJctcbHuP0sjT0pLmcNYA\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 17 May 2024 19:32:41 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"66479ff665ee4674a4f7fe57\",\n    \"name\": \"Main Course\",\n    \"description\": \"A selection of delicious main course dishes.\",\n    \"image\": \"https://example.com/main-course.jpg\",\n    \"taxApplicable\": true,\n    \"taxNumber\": \"ABC123\",\n    \"taxType\": \"VAT\",\n    \"subCategories\": [\n        {\n            \"_id\": \"6647b0cc75376f2d732669f2\",\n            \"categoryId\": \"66479ff665ee4674a4f7fe57\",\n            \"name\": \"new category\",\n            \"description\": \"A selection of delicious main course dishes.\",\n            \"image\": \"https://example.com/main-course.jpg\",\n            \"taxApplicable\": true,\n            \"taxNumber\": \"ABC123\",\n            \"taxType\": \"VAT\",\n            \"items\": [],\n            \"__v\": 0\n        }\n    ],\n    \"__v\": 1\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "subcategory",
+			"item": [
+				{
+					"name": "create subcategory",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"sub category\",\n  \"categoryId\" : \"66479ff665ee4674a4f7fe57\",\n  \"description\": \"A selection of delicious main course dishes.\",\n  \"image\": \"https://example.com/main-course.jpg\",\n  \"taxApplicable\": true,\n  \"taxNumber\": \"ABC123\",\n  \"taxType\": \"VAT\"\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://menu-management-cj6w.onrender.com/api/v1/subcategory/create-sub-category"
+					},
+					"response": [
+						{
+							"name": "create sub cat",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"sub category\",\n  \"categoryId\" : \"66479ff665ee4674a4f7fe57\",\n  \"description\": \"A selection of delicious main course dishes.\",\n  \"image\": \"https://example.com/main-course.jpg\",\n  \"taxApplicable\": true,\n  \"taxNumber\": \"ABC123\",\n  \"taxType\": \"VAT\"\n\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "https://menu-management-cj6w.onrender.com/api/v1/subcategory/create-sub-category"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "280"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"118-55OqQCDFXVpRMD0y7+ve4DuJR6Y\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 17 May 2024 18:34:19 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"categoryId\": \"66479ff665ee4674a4f7fe57\",\n    \"name\": \"sub category\",\n    \"description\": \"A selection of delicious main course dishes.\",\n    \"image\": \"https://example.com/main-course.jpg\",\n    \"taxApplicable\": true,\n    \"taxNumber\": \"ABC123\",\n    \"taxType\": \"VAT\",\n    \"items\": [],\n    \"_id\": \"6647a32b978d89a919c36956\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "update sub category",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Sub Cat update Course\",\n  \"description\": \"A selection of delicious main course dishes.\",\n  \"image\": \"https://example.com/main-course.jpg\",\n  \"taxApplicable\": true,\n  \"taxNumber\": \"ABC123r\",\n  \"taxType\": \"GST\"\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://menu-management-cj6w.onrender.com/api/v1/subcategory/update-sub-category/6647a32b978d89a919c36956"
+					},
+					"response": [
+						{
+							"name": "update sub cat",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"Sub Cat update Course\",\n  \"description\": \"A selection of delicious main course dishes.\",\n  \"image\": \"https://example.com/main-course.jpg\",\n  \"taxApplicable\": true,\n  \"taxNumber\": \"ABC123r\",\n  \"taxType\": \"GST\"\n\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "https://menu-management-cj6w.onrender.com/api/v1/subcategory/update-sub-category/6647a32b978d89a919c36956"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "290"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"122-g+zX+pp9OJoLz7ayynobR7aUa7o\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 17 May 2024 18:35:59 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"6647a32b978d89a919c36956\",\n    \"categoryId\": \"66479ff665ee4674a4f7fe57\",\n    \"name\": \"Sub Cat update Course\",\n    \"description\": \"A selection of delicious main course dishes.\",\n    \"image\": \"https://example.com/main-course.jpg\",\n    \"taxApplicable\": true,\n    \"taxNumber\": \"ABC123r\",\n    \"taxType\": \"GST\",\n    \"items\": [],\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "get sub categories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "https://menu-management-cj6w.onrender.com/api/v1/subcategory/get-sub-categories"
+					},
+					"response": [
+						{
+							"name": "get subcats",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "https://menu-management-cj6w.onrender.com/api/v1/subcategory/get-sub-categories"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "292"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"124-4A8G4uqtja0TvbVr21idXGHBWNk\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 17 May 2024 18:37:54 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"6647a32b978d89a919c36956\",\n        \"categoryId\": \"66479ff665ee4674a4f7fe57\",\n        \"name\": \"Sub Cat update Course\",\n        \"description\": \"A selection of delicious main course dishes.\",\n        \"image\": \"https://example.com/main-course.jpg\",\n        \"taxApplicable\": true,\n        \"taxNumber\": \"ABC123r\",\n        \"taxType\": \"GST\",\n        \"items\": [],\n        \"__v\": 0\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "delete sub cat by id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "https://menu-management-cj6w.onrender.com/api/v1/subcategory/delete-sub-category/6647a32b978d89a919c36956"
+					},
+					"response": [
+						{
+							"name": "delete cat by id",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": "https://menu-management-cj6w.onrender.com/api/v1/category/delete-category/6647a095b14f3c4d5ca20cf7"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "251"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"fb-a3JQ2buFKuZHu8hOBY4S87386rA\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 17 May 2024 18:27:52 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"6647a095b14f3c4d5ca20cf7\",\n    \"name\": \"Primary Course\",\n    \"description\": \"A selection of delicious main course dishes.\",\n    \"image\": \"https://example.com/main-course.jpg\",\n    \"taxApplicable\": true,\n    \"taxNumber\": \"ABC123r\",\n    \"taxType\": \"GST\",\n    \"subCategories\": [],\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "get subcat by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "https://menu-management-cj6w.onrender.com/api/v1/subcategory/sub-category/6647a32b978d89a919c36956"
+					},
+					"response": [
+						{
+							"name": "get sub cat by id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "https://menu-management-cj6w.onrender.com/api/v1/subcategory/sub-category/6647a32b978d89a919c36956"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "290"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"122-g+zX+pp9OJoLz7ayynobR7aUa7o\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 17 May 2024 18:39:31 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"6647a32b978d89a919c36956\",\n    \"categoryId\": \"66479ff665ee4674a4f7fe57\",\n    \"name\": \"Sub Cat update Course\",\n    \"description\": \"A selection of delicious main course dishes.\",\n    \"image\": \"https://example.com/main-course.jpg\",\n    \"taxApplicable\": true,\n    \"taxNumber\": \"ABC123r\",\n    \"taxType\": \"GST\",\n    \"items\": [],\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "get sub category by category id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "https://menu-management-cj6w.onrender.com/api/v1/subcategory/get-sub-categories-by-category/66479ff665ee4674a4f7fe57"
+					},
+					"response": [
+						{
+							"name": "get sub cat by cat id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "https://menu-management-cj6w.onrender.com/api/v1/subcategory/get-sub-categories-by-category/66479ff665ee4674a4f7fe57"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "282"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"11a-C5H+rkjvvy/Yl+JmS/eaxRwGn0g\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 17 May 2024 18:58:41 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"6647a8d21014208c92cb084f\",\n        \"categoryId\": \"66479ff665ee4674a4f7fe57\",\n        \"name\": \"sub category\",\n        \"description\": \"A selection of delicious main course dishes.\",\n        \"image\": \"https://example.com/main-course.jpg\",\n        \"taxApplicable\": true,\n        \"taxNumber\": \"ABC123\",\n        \"taxType\": \"VAT\",\n        \"items\": [],\n        \"__v\": 0\n    }\n]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "items",
+			"item": [
+				{
+					"name": "get item by category id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "https://menu-management-cj6w.onrender.com/api/v1/item/get-items-by-category/66479ff665ee4674a4f7fe57"
+					},
+					"response": [
+						{
+							"name": "get item by category id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "https://menu-management-cj6w.onrender.com/api/v1/item/get-items-by-category/66479ff665ee4674a4f7fe57"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "296"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"128-pp+WU58um74IXVVUbp8ai8diqJg\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 17 May 2024 20:04:32 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"6647b5c56de4760691ceede4\",\n        \"parentId\": \"6647ad2d31f9cf488133dccf\",\n        \"parentModel\": \"SubCategory\",\n        \"name\": \"sub item\",\n        \"description\": \"An item \",\n        \"image\": \"https://example.com/main-course.jpg\",\n        \"taxApplicable\": true,\n        \"taxNumber\": \"ABC123\",\n        \"baseAmount\": 52111,\n        \"discount\": 4000,\n        \"totalAmount\": 56544,\n        \"__v\": 0\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "get item by subcat id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "https://menu-management-cj6w.onrender.com/api/v1/item/get-items-by-sub-category/6647ad2d31f9cf488133dccf"
+					},
+					"response": [
+						{
+							"name": "get item by subcat id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "https://menu-management-cj6w.onrender.com/api/v1/item/get-items-by-sub-category/6647ad2d31f9cf488133dccf"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "296"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"128-pp+WU58um74IXVVUbp8ai8diqJg\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 17 May 2024 20:00:13 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"6647b5c56de4760691ceede4\",\n        \"parentId\": \"6647ad2d31f9cf488133dccf\",\n        \"parentModel\": \"SubCategory\",\n        \"name\": \"sub item\",\n        \"description\": \"An item \",\n        \"image\": \"https://example.com/main-course.jpg\",\n        \"taxApplicable\": true,\n        \"taxNumber\": \"ABC123\",\n        \"baseAmount\": 52111,\n        \"discount\": 4000,\n        \"totalAmount\": 56544,\n        \"__v\": 0\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "get item by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "https://menu-management-cj6w.onrender.com/api/v1/item/get-item/6647b5c56de4760691ceede4"
+					},
+					"response": [
+						{
+							"name": "get item by id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "https://menu-management-cj6w.onrender.com/api/v1/item/get-item/6647b5c56de4760691ceede4"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "294"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"126-JkXhcKW5Dm0vt6ht6LEl6jmb258\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 17 May 2024 19:58:30 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"6647b5c56de4760691ceede4\",\n    \"parentId\": \"6647ad2d31f9cf488133dccf\",\n    \"parentModel\": \"SubCategory\",\n    \"name\": \"sub item\",\n    \"description\": \"An item \",\n    \"image\": \"https://example.com/main-course.jpg\",\n    \"taxApplicable\": true,\n    \"taxNumber\": \"ABC123\",\n    \"baseAmount\": 52111,\n    \"discount\": 4000,\n    \"totalAmount\": 56544,\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "delete item",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "https://menu-management-cj6w.onrender.com/api/v1/item/delete-item/6647b3e9d64ffb41d120aa78"
+					},
+					"response": [
+						{
+							"name": "delete item",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": "https://menu-management-cj6w.onrender.com/api/v1/item/delete-item/6647b3e9d64ffb41d120aa78"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "298"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"12a-XHckqjcCgyqD9s/GtEji4UEFy5c\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 17 May 2024 19:57:30 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"6647b3e9d64ffb41d120aa78\",\n    \"parentId\": \"66479ff665ee4674a4f7fe57\",\n    \"parentModel\": \"SubCategory\",\n    \"name\": \"sub category\",\n    \"description\": \"An item \",\n    \"image\": \"https://example.com/main-course.jpg\",\n    \"taxApplicable\": true,\n    \"taxNumber\": \"ABC123\",\n    \"baseAmount\": 59999,\n    \"discount\": 3455,\n    \"totalAmount\": 56544,\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "get items",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "https://menu-management-cj6w.onrender.com/api/v1/item/get-items"
+					},
+					"response": [
+						{
+							"name": "get items",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "https://menu-management-cj6w.onrender.com/api/v1/item/get-items"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2393"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"959-Nwj2hOhx2wHqV75a/05qgbDN0H0\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 17 May 2024 19:54:55 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"6647b3e9d64ffb41d120aa78\",\n        \"parentId\": \"66479ff665ee4674a4f7fe57\",\n        \"parentModel\": \"SubCategory\",\n        \"name\": \"sub category\",\n        \"description\": \"An item \",\n        \"image\": \"https://example.com/main-course.jpg\",\n        \"taxApplicable\": true,\n        \"taxNumber\": \"ABC123\",\n        \"baseAmount\": 59999,\n        \"discount\": 3455,\n        \"totalAmount\": 56544,\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"6647b457940654ebad369af4\",\n        \"parentId\": \"66479ff665ee4674a4f7fe57\",\n        \"parentModel\": \"SubCategory\",\n        \"name\": \"sub category\",\n        \"description\": \"An item \",\n        \"image\": \"https://example.com/main-course.jpg\",\n        \"taxApplicable\": true,\n        \"taxNumber\": \"ABC123\",\n        \"baseAmount\": 59999,\n        \"discount\": 3455,\n        \"totalAmount\": 56544,\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"6647b4f9d4875e612a9eac3c\",\n        \"parentId\": \"66479ff665ee4674a4f7fe57\",\n        \"parentModel\": \"SubCategory\",\n        \"name\": \"sub category\",\n        \"description\": \"An item \",\n        \"image\": \"https://example.com/main-course.jpg\",\n        \"taxApplicable\": true,\n        \"taxNumber\": \"ABC123\",\n        \"baseAmount\": 59999,\n        \"discount\": 3455,\n        \"totalAmount\": 56544,\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"6647b53ac05c2029c4b1c68b\",\n        \"parentId\": \"66479ff665ee4674a4f7fe57\",\n        \"parentModel\": \"SubCategory\",\n        \"name\": \"sub category\",\n        \"description\": \"An item \",\n        \"image\": \"https://example.com/main-course.jpg\",\n        \"taxApplicable\": true,\n        \"taxNumber\": \"ABC123\",\n        \"baseAmount\": 59999,\n        \"discount\": 3455,\n        \"totalAmount\": 56544,\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"6647b549a867a1b46a3de862\",\n        \"parentId\": \"66479ff665ee4674a4f7fe57\",\n        \"parentModel\": \"SubCategory\",\n        \"name\": \"sub category\",\n        \"description\": \"An item \",\n        \"image\": \"https://example.com/main-course.jpg\",\n        \"taxApplicable\": true,\n        \"taxNumber\": \"ABC123\",\n        \"baseAmount\": 59999,\n        \"discount\": 3455,\n        \"totalAmount\": 56544,\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"6647b562c3549863e2f6132e\",\n        \"parentId\": \"66479ff665ee4674a4f7fe57\",\n        \"parentModel\": \"SubCategory\",\n        \"name\": \"sub category\",\n        \"description\": \"An item \",\n        \"image\": \"https://example.com/main-course.jpg\",\n        \"taxApplicable\": true,\n        \"taxNumber\": \"ABC123\",\n        \"baseAmount\": 59999,\n        \"discount\": 3455,\n        \"totalAmount\": 56544,\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"6647b56d771c2ac6cf4804c6\",\n        \"parentId\": \"66479ff665ee4674a4f7fe57\",\n        \"parentModel\": \"SubCategory\",\n        \"name\": \"sub category\",\n        \"description\": \"An item \",\n        \"image\": \"https://example.com/main-course.jpg\",\n        \"taxApplicable\": true,\n        \"taxNumber\": \"ABC123\",\n        \"baseAmount\": 59999,\n        \"discount\": 3455,\n        \"totalAmount\": 56544,\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"6647b5c56de4760691ceede4\",\n        \"parentId\": \"6647ad2d31f9cf488133dccf\",\n        \"parentModel\": \"SubCategory\",\n        \"name\": \"sub category\",\n        \"description\": \"An item \",\n        \"image\": \"https://example.com/main-course.jpg\",\n        \"taxApplicable\": true,\n        \"taxNumber\": \"ABC123\",\n        \"baseAmount\": 59999,\n        \"discount\": 3455,\n        \"totalAmount\": 56544,\n        \"__v\": 0\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "update item",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"sub item\",\n  \"subCategoryId\" : \"6647ad2d31f9cf488133dccf\",\n  \"description\": \"An item \",\n  \"image\": \"https://example.com/main-course.jpg\",\n  \"taxApplicable\": true,\n  \"taxNumber\": \"ABC123\",\n  \"taxType\": \"VAT\",\n  \"baseAmount\" : 52111,\n  \"discount\" : 4000\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://menu-management-cj6w.onrender.com/api/v1/item/update-item/6647b5c56de4760691ceede4"
+					},
+					"response": [
+						{
+							"name": "update item",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"sub item\",\n  \"subCategoryId\" : \"6647ad2d31f9cf488133dccf\",\n  \"description\": \"An item \",\n  \"image\": \"https://example.com/main-course.jpg\",\n  \"taxApplicable\": true,\n  \"taxNumber\": \"ABC123\",\n  \"taxType\": \"VAT\",\n  \"baseAmount\" : 52111,\n  \"discount\" : 4000\n\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "https://menu-management-cj6w.onrender.com/api/v1/item/update-item/6647b5c56de4760691ceede4"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "294"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"126-JkXhcKW5Dm0vt6ht6LEl6jmb258\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 17 May 2024 19:56:51 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"6647b5c56de4760691ceede4\",\n    \"parentId\": \"6647ad2d31f9cf488133dccf\",\n    \"parentModel\": \"SubCategory\",\n    \"name\": \"sub item\",\n    \"description\": \"An item \",\n    \"image\": \"https://example.com/main-course.jpg\",\n    \"taxApplicable\": true,\n    \"taxNumber\": \"ABC123\",\n    \"baseAmount\": 52111,\n    \"discount\": 4000,\n    \"totalAmount\": 56544,\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "create item",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"sub category\",\n  \"subCategoryId\" : \"66479ff665ee4674a4f7fe57\",\n  \"description\": \"An item \",\n  \"image\": \"https://example.com/main-course.jpg\",\n  \"taxApplicable\": true,\n  \"taxNumber\": \"ABC123\",\n  \"taxType\": \"VAT\",\n  \"baseAmount\" : 59999,\n  \"discount\" : 3455\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://menu-management-cj6w.onrender.com/api/v1/item/create-item"
+					},
+					"response": [
+						{
+							"name": "create item",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"sub category\",\n  \"subCategoryId\" : \"6647ad2d31f9cf488133dccf\",\n  \"description\": \"An item \",\n  \"image\": \"https://example.com/main-course.jpg\",\n  \"taxApplicable\": true,\n  \"taxNumber\": \"ABC123\",\n  \"taxType\": \"VAT\",\n  \"baseAmount\" : 59999,\n  \"discount\" : 3455\n\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "https://menu-management-cj6w.onrender.com/api/v1/item/create-item"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "298"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"12a-7PEx+qLC9DRdzpNnx2Ex4e1N5M8\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 17 May 2024 19:53:43 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"parentId\": \"6647ad2d31f9cf488133dccf\",\n    \"parentModel\": \"SubCategory\",\n    \"name\": \"sub category\",\n    \"description\": \"An item \",\n    \"image\": \"https://example.com/main-course.jpg\",\n    \"taxApplicable\": true,\n    \"taxNumber\": \"ABC123\",\n    \"baseAmount\": 59999,\n    \"discount\": 3455,\n    \"totalAmount\": 56544,\n    \"_id\": \"6647b5c56de4760691ceede4\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "search item",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "https://menu-management-cj6w.onrender.com/api/v1/item/search-items/sub item"
+					},
+					"response": [
+						{
+							"name": "search items",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "https://menu-management-cj6w.onrender.com/api/v1/item/search-items/sub item"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "296"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"128-pp+WU58um74IXVVUbp8ai8diqJg\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 17 May 2024 20:09:55 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"6647b5c56de4760691ceede4\",\n        \"parentId\": \"6647ad2d31f9cf488133dccf\",\n        \"parentModel\": \"SubCategory\",\n        \"name\": \"sub item\",\n        \"description\": \"An item \",\n        \"image\": \"https://example.com/main-course.jpg\",\n        \"taxApplicable\": true,\n        \"taxNumber\": \"ABC123\",\n        \"baseAmount\": 52111,\n        \"discount\": 4000,\n        \"totalAmount\": 56544,\n        \"__v\": 0\n    }\n]"
+						}
+					]
+				}
+			]
+		}
+	]
+}
