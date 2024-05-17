@@ -50,19 +50,34 @@ const subCategorySchema = mongoose.Schema({
   },
   taxApplicable: {
     type: Boolean,
-    required: true,
   },
   taxNumber: {
     type: String,
-    required: function () {
-      return this.taxApplicable;
-    },
   },
   taxType: {
     type: String,
     required: true,
   },
   items: [{ type: mongoose.Schema.Types.ObjectId, ref: "Item" }], // References to Item
+});
+
+subCategorySchema.pre('save', async function(next) {
+  if (this.isNew) { // Only set defaults for new documents
+    try {
+      const category = await mongoose.model('Category').findById(this.categoryId);
+      if (category) {
+        this.taxApplicable = this.taxApplicable !== undefined ? this.taxApplicable : category.taxApplicable;
+        this.taxNumber = this.taxNumber || category.taxNumber;
+        this.taxType = this.taxType || category.taxType;
+      } else {
+        const error = new Error('Category not found');
+        return next(error);
+      }
+    } catch (error) {
+      return next(error);
+    }
+  }
+  next();
 });
 
 const itemSchema = mongoose.Schema({
