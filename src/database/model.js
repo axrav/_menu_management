@@ -31,7 +31,11 @@ const categorySchema = mongoose.Schema({
 });
 
 const subCategorySchema = mongoose.Schema({
-  categoryId: { type : mongoose.Schema.Types.ObjectId, ref: "Category", required: true }, // References to Category
+  categoryId: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "Category",
+    required: true,
+  }, // References to Category
   name: {
     type: String,
     required: true,
@@ -117,6 +121,5 @@ const itemSchema = mongoose.Schema({
 const Category = mongoose.model("Category", categorySchema);
 const SubCategory = mongoose.model("SubCategory", subCategorySchema);
 const Item = mongoose.model("Item", itemSchema);
-
 
 module.exports = { Category, SubCategory, Item };

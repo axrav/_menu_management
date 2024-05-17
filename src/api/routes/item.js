@@ -1,18 +1,19 @@
 const Router = require("express").Router;
 
 const {
-    createItem,
-    getItems,
-    getItembyId,
-    updateItem,
-    deleteItem,
-    getItemsBySubCategoryId,
-    getItemsByCategoryId,
-    searchItems
-    } = require("../controllers/item");
+  createItem,
+  getItems,
+  getItembyId,
+  updateItem,
+  deleteItem,
+  getItemsBySubCategoryId,
+  getItemsByCategoryId,
+  searchItems,
+} = require("../controllers/item");
 
 const itemRouter = Router();
 
+// item routes
 itemRouter.post("/create-item", createItem);
 itemRouter.get("/get-items", getItems);
 itemRouter.get("/get-item/:id", getItembyId);

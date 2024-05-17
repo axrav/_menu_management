@@ -1,9 +1,17 @@
 const app = require("express");
-const { createCategory, getCategories, getCategorybyId, updateCategory, deleteCategory, getFullcategory } = require("../controllers/category");
+const {
+  createCategory,
+  getCategories,
+  getCategorybyId,
+  updateCategory,
+  deleteCategory,
+  getFullcategory,
+} = require("../controllers/category");
 const { get } = require("mongoose");
 
 const categoryRouter = app.Router();
 
+// category routes
 categoryRouter.post("/create-category", createCategory);
 categoryRouter.get("/get-categories", getCategories);
 categoryRouter.get("/get-category/:id", getCategorybyId);
